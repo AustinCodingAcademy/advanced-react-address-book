@@ -12,6 +12,7 @@ function App() {
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
       </p>
+      <a href="mailto:popularwatson@gmail.com">popularwatson@gmail.com</a>
     </div>
   );
 }
