@@ -4,7 +4,7 @@ import "./App.css";
 
 function Marquee() {
   return (
-    <marquee> Welcome back Mr Messnier</marquee>
+    <marquee> Welcome back Mr Meissner</marquee>
   );
 }
 
