@@ -22,3 +22,36 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.foot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: lightgrey;
+  padding: 1em;
+}
+
+.zac {
+  position: relative;
+  background-color: lightgrey;
+  padding: 1em;
+}
+
+.sidebarleft {
+  position: absolute;
+  top: 215px;
+  left: 0;
+  bottom: 0;
+  background-color: powderblue;
+  padding: 1em;
+}
+
+.sidebarright {
+  position: absolute;
+  top: 215px;
+  right: 0;
+  bottom: 0;
+  background-color: powderblue;
+  padding: 1em;
+}
