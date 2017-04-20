@@ -14,7 +14,7 @@ import Component1 from "./Component1.js";
 
 
 function App(props) {
-  const userItems = props.users.map(function(user,index) {
+  const userItems = props.users.map(function (user,index) {
     return (
       <li>
         {user.first_name}
@@ -30,7 +30,7 @@ function App(props) {
       </div>
       <p className="App-intro">
         <h2>Welcome!</h2>
-        <Component1 message="Props Messsage Test"/>
+        <Component1 message="Props Messsage Test" />
         <Component2 />
         {userItems}
         <Component3 />
