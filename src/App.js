@@ -1,7 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
+import Header from "./componants/Header";
+import Ptag from "./componants/pTag";
+import Appintro from "./componants/appIntro";
+import AnotherComp from "./componants/Another-comp";
+import Pic from "./componants/picture";
+import CompSix from "./componants/CompSix";
+import Seven from "./componants/seven";
 // add seven additional things to this ract app
 
 
@@ -10,12 +16,15 @@ function App() {
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-        <p> Test Change </p>
+        <Header message="This is a new header" />
+
       </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <Appintro />
+      <Ptag message="Paragaph tag test" />
+      <AnotherComp />
+      <Pic />
+      <CompSix message="number six" />
+      <Seven />
     </div>
   );
 }
