@@ -18,6 +18,32 @@
   font-size: large;
 }
 
+.Main-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 300px;
+  border: solid 1px;
+}
+
+.Section-content {
+  width: 300px;
+  height: 100px;
+  color: red;
+}
+
+.Footer-container {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+}
+
+.Footer-text {
+  padding-top: 60px;
+  font-size: 70px;
+  font-weight: 600;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
