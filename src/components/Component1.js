@@ -1,12 +1,12 @@
 import React from "react";
 
 
-export default class Component1 extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>Component1</h1>
-      </div>
-    );
-  }
+function Component1(props) {
+  return (
+    <div className="Grey-back">
+      <h3> {props.message} </h3>
+    </div>
+  );
 }
+
+export default Component1;

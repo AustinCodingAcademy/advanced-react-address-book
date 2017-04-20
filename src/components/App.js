@@ -11,17 +11,28 @@ import Component2 from "./Component2.js";
 import Component1 from "./Component1.js";
 
 
-function App() {
+
+
+function App(props) {
+  const userItems = props.users.map(function(user,index) {
+    return (
+      <li>
+        {user.first_name}
+        {user.last_name}
+      </li>
+    );
+  });
+
   return (
     <div className="App">
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello World!</h1>
       </div>
       <p className="App-intro">
         <h2>Welcome!</h2>
-        <Component1 />
+        <Component1 message="Props Messsage Test"/>
         <Component2 />
+        {userItems}
         <Component3 />
         <Component4 />
         <Component5 />
