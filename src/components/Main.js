@@ -1,13 +1,14 @@
 import React from "react";
 import Section1 from "./Section1";
-import Section2 from "./Section1";
-import Section3 from "./Section1";
+import Section2 from "./Section2";
+import Section3 from "./Section3";
 
-function Main() {
+function Main(props) {
+  const first = props.user;
   return (
     <div className="Main-container">
-      <Section1 />
-      <Section2 />
+      <Section1 users={props.users} />
+      <Section2 user={first} />
       <Section3 />
     </div>
   );

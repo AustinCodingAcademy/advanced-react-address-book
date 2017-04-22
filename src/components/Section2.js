@@ -1,13 +1,11 @@
 import React from "react";
+import UserDetail from "./UserDetail";
 
-function Section2() {
+function Section2(props) {
+  const first = props.user;
   return (
     <div className="Section-content">
-      <p>
-        Suspendisse maximus, odio vel tincidunt viverra, sem dui feugiat mauris,
-        eu ultricies lorem dui vitae est. Proin ac vehicula velit.
-        Vestibulum eget diam ullamcorper, consectetur est at, imperdiet turpis.
-      </p>
+      <UserDetail user={first} />
     </div>
   );
 }
