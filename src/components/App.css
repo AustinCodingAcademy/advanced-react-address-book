@@ -18,6 +18,24 @@
   font-size: large;
 }
 
+.App-footer{
+  background-color: #222;
+  height: 75px;
+  padding: 20px;
+  color: white;
+  bottom: 0;
+}
+
+.App-RightSidebar{
+  float: right;
+  background-color: #fa8072;
+}
+
+.App-LeftSidebar{
+  float: left;
+  background-color: #fa8072;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
