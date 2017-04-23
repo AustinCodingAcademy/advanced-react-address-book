@@ -1,15 +1,36 @@
 import React from "react";
 import "./App.css";
 
-function UserDetail(props) {
-  const UserEins = props.users[0].first_name;
-  return (
-    <p>
-      {UserEins}
-    </p>
-  );
-}
-
-
+const UserDetail = React.createClass({
+  getInitialState: function () {
+    return {
+      value: "Hide",
+      hide: true
+    };
+  },
+  changeButtonText() {
+    this.setState({
+      hide: !this.state.hide
+    });
+    if (this.state.hide) {
+      this.setState({
+        value: "Hide"
+      });
+    } else {
+      this.setState({
+        value: "Show"
+      });
+    }
+  },
+  render() {
+    return (
+      <div>
+        <button onClick={() => this.changeButtonText()}>
+          {this.state.value}
+        </button>
+      </div>
+    );
+  }
+});
 
 export default UserDetail;

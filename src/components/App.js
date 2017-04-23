@@ -5,6 +5,7 @@ import Zwei from "./Zwei";
 import Drei from "./Drei";
 import Vier from "./Vier";
 import Funf from "./Funf";
+import ListOfUsers from "./ListOfUsers";
 import UserDetail from "./UserDetail";
 import users from "../users";
 
@@ -23,6 +24,7 @@ function App(props) {
       <Eins />
       <Zwei />
       <Drei />
+      <ListOfUsers />
       <UserDetail users={users} />
       {Menschen}
       <Vier />
