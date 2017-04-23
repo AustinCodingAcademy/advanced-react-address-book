@@ -1,5 +1,5 @@
 import React from "react";
-import Users from "../users"
+import Users from "../users";
 import UserDetails from "./UserDetails";
 
 function ListOfUsers(props) {
@@ -19,7 +19,7 @@ function ListOfUsers(props) {
         {props.content}
       </p>
       <ul>
-        {objectsOfUsers}
+        {objectsOfUsers[0]}
       </ul>
     </div>
   );
