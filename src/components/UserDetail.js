@@ -20,7 +20,7 @@ const phone = props.userDetails[0].phone;
     <div>
       <h3> User Details</h3>
     <hr />
-      {address}  {occupation}  {phone}  {avatar}
+      {address}  {occupation} <br /> {phone} <br /> <img src={avatar} />
     </div>
   );
 
