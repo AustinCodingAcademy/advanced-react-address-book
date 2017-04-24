@@ -9,7 +9,9 @@ function UserDetails(props) {
   const avatar = props.arrayOfUsers[0].avatar;
   return (
     <div>
+      <hr />
       <h2>User Details</h2>
+      <hr />
       <p> {occupation} <br /> {address} <br /> {phone} <br /> <img src={avatar} /></p>
     </div>
   );
