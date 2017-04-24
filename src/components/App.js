@@ -36,8 +36,10 @@ function App(props) {
          <ComponentX/>
 
          */}
+
       <ListOfUsers userNames={props.usersDB} />
       <UserDetail userDetails={props.usersDB} />
+
       <Footer /> {/* Footer location*/}
     </div>
 

@@ -4,14 +4,12 @@ import React from "react";
 function ListOfUsers(props) {
 
   const Names=props.userNames.map(function(userNames,index){
-  return (
-    <div key={index}>
-      <li>
-      {userNames.first_name} {userNames.last_name}
-      </li>
+    return (
+      <div key={index}>
+        {userNames.first_name} {userNames.last_name}
       </div>
-  );
-});
+    );
+  });
 
   return (
     <div>
