@@ -3,9 +3,9 @@ import React from "react";
 function AnotherComp() {
   return (
     <div>
-      <p className="App-intro"> AnotherComponant</p>
+      <p className="App-intro"> AnotherComponant Test</p>
     </div>
-   
+
   );
 }
 
