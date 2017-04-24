@@ -7,7 +7,7 @@ import users from "./users";
 
 function render() {
   ReactDOM.render(
-    <App users={users}/>,  // send 'users' array to APP.js
+    <App usersDB={users}/>,  // send 'users' array to APP.js
     document.getElementById("root")
   );
 }

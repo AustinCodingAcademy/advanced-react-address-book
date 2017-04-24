@@ -1,20 +1,21 @@
 import React from "react";
-import UserDetail from './UserDetail.js';
+//import UserDetail from './UserDetail.js';
 
 function ListOfUsers(props) {
-  const names = props.userItems;
-  console.log(names);
 
-  const address = props.userItems2.map((userItems2,index) =>
+  const Names=props.userNames.map(function(userNames,index){
+  return (
     <div key={index}>
-      {userItems2} {index}
-    </div>
-);
-
+      <li>
+      {userNames.first_name} {userNames.last_name}
+      </li>
+      </div>
+  );
+});
 
   return (
     <div>
-      <UserDetail address={address}/>
+      {Names}
     </div>
   );  // end of return
 

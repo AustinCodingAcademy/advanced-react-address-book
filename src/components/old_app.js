@@ -22,6 +22,21 @@ import UserDetail from './UserDetail.js';
 
 
 function App(props) {
+  const userNames=props.users.map(function(users, index) {
+    return (
+      <div>
+        {users.first_name}{users.last_name}
+      </div>
+    );  // end of return for MAP function
+  });
+  const userItems2=props.users.map(function(users, index) {
+    return (
+      <div key = {index}>
+        {users.address}{users.phone}{users.occupation}{users.avatar}
+      </div>
+    );  // end of return for MAP function
+
+  });  // end of APP fucntion
 
   return (
     <div className="App">
@@ -34,10 +49,10 @@ function App(props) {
       // <Component5/>
       // <Component6/>
          <ComponentX/>
-
+    <UserDetail  />
          */}
-      <ListOfUsers userNames={props.usersDB} />
-      <UserDetail userDetails={props.usersDB} />
+      <ListOfUsers userNames={userNames} />
+      <UserDetail userItems2={userItems2} />
       <Footer /> {/* Footer location*/}
     </div>
 
