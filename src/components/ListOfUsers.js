@@ -13,6 +13,8 @@ function ListOfUsers(props) {
 
   return (
     <div>
+      <h3>User Accounts  <hr/> </h3>
+
       {Names}
     </div>
   );  // end of return
