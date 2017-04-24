@@ -37,7 +37,7 @@ function App(props) {
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       <div className="App-intro">
-        <h2>Welcome!</h2>
+        <h2>User List</h2>
         <ListOfUsers arrayOfUsers={props.arrayOfUsers} />
         <UserDetails arrayOfUsers={props.arrayOfUsers} />
       </div>

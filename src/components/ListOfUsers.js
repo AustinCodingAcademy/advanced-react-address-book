@@ -4,13 +4,12 @@ import React from "react";
 function ListOfUsers(props) {
   return (
     <div>
-      <ul>
+      <hr />
         {props.arrayOfUsers.map(user => {
           return (
-            <li> {user.first_name} </li>
+            <p> {user.first_name} </p>
           );
         })}
-      </ul>
     </div>
   );
 }
