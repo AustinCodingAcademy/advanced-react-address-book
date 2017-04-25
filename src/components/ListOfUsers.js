@@ -1,28 +1,30 @@
 import React from "react";
-import Users from "../users";
+import PropTypes from "prop-types";
 import UserDetails from "./UserDetails";
 
+
 function ListOfUsers(props) {
-
-  const objectsOfUsers = Users.map((item) => {
-    return (
-      <UserDetails key={item.id} id={item.id} first_name={item.first_name}
-        last_name={item.last_name} address={item.address}
-        phone={item.phone} occupation={item.occupation} />
-    );
-  });
-
   return (
     <div>
-      <h1>{props.title}</h1>
       <p>
-        {props.content}
+        Find a person
       </p>
-      <ul>
-        {objectsOfUsers[0]}
-      </ul>
+      {props.content.map((person) => {
+        return (
+          <UserDetails key={person.id} inner={person} />
+        );
+      }
+        )}
     </div>
   );
 }
+
+ListOfUsers.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired
+
+};
+
+
 
 export default ListOfUsers;
