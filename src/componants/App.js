@@ -9,7 +9,7 @@ import Pic from "./picture";
 import CompSix from "./CompSix";
 import Seven from "./seven";
 import Main from "./Main";
-
+import propTypes from "prop-types";
 // add seven additional things to this ract app
 
 function App(props) {
@@ -19,7 +19,6 @@ function App(props) {
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Header message="React: header test" />
-
       </div>
       <Appintro />
       <Ptag message="React: paragraph tag test" />
@@ -31,5 +30,10 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  users: propTypes.string.isRequired
+};
+
 
 export default App;

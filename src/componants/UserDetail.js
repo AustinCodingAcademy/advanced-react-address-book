@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 function UserDetail(props) {
   const firstName = (props.user.first_name);
@@ -12,5 +13,8 @@ function UserDetail(props) {
     </ul>
   );
 }
+UserDetail.propTypes = {
+  user: propTypes.string.isRequired
+};
 
 export default UserDetail;

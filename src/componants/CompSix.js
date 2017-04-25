@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 function Compsix(props) {
   return (
@@ -10,5 +11,9 @@ function Compsix(props) {
 
   );
 }
+Compsix.propTypes = {
+  message: propTypes.string.isRequired
+};
+
 
 export default Compsix;

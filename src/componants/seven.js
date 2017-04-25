@@ -5,7 +5,6 @@ function Seven() {
     <div>
       <p2 className="App-intro"> Seven#@!@#</p2>
     </div>
-
   );
 }
 

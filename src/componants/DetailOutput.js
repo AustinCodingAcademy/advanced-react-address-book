@@ -1,5 +1,6 @@
 import React from "react";
 import UserDetail from "./UserDetail";
+import propTypes from "prop-types";
 
 function DetailOutput(props) {
   const first = props.user;
@@ -9,5 +10,10 @@ function DetailOutput(props) {
     </div>
   );
 }
+DetailOutput.propTypes = {
+  user: propTypes.string.isRequired
+};
+
+
 
 export default DetailOutput;
