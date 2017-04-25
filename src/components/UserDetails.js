@@ -4,9 +4,10 @@ import PropTypes from "prop-types";
 
 
 function UserDetails(props) {
-  const { firstName, lastName, phone, address, occupation} = Helpers.selectUser(props.arrayOfUsers, 0);
+  const {firstName, lastName, phone, address, occupation, avatar} = Helpers.selectUser(props.arrayOfUsers, 0);
   return (
     <div>
+      <img src={avatar} />
       <p>{firstName}</p>
       <p>{lastName}</p>
       <p>{phone}</p>
