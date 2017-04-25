@@ -1,20 +1,26 @@
 import React from "react";
-
+import * as Helpers from "../constants";
+import PropTypes from "prop-types";
 
 
 function UserDetails(props) {
-  const address = props.arrayOfUsers[0].address;
-  const occupation = props.arrayOfUsers[0].occupation;
-  const phone = props.arrayOfUsers[0].phone;
-  const avatar = props.arrayOfUsers[0].avatar;
+  const { first_name, last_name, phone, address, occupation} = Helpers.selectUser(props.arrayOfUsers, 0);
   return (
     <div>
-      <hr />
-      <h2>User Details</h2>
-      <hr />
-      <p> {occupation} <br /> {address} <br /> {phone} <br /> <img src={avatar} /></p>
+      <p>{first_name}</p>
+      <p>{last_name}</p>
+      <p>{phone}</p>
+      <p>{address}</p>
+      <p>{occupation}</p>
     </div>
   );
 }
+
+UserDetails.propTypes = {
+  arrayOfUsers: PropTypes.shape({
+    first_name: PropTypes.string.isRequired,
+    last_name: PropTypes.string.isRequired,
+  })
+};
 
 export default UserDetails;

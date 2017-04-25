@@ -3,34 +3,12 @@ import logo from "./logo.svg";
 import "./App.css";
 import ListOfUsers from "./ListOfUsers";
 import UserDetails from "./UserDetails";
+import PropTypes from "prop-types";
 
 
 
 function App(props) {
-  // const userDetail = props.users.map(function (user,index) {
-  //   return (
-  //     <div>
-  //       <li>
-  //         {user.first_name}
-  //       </li>
-  //       <li>
-  //         {user.last_name}
-  //       </li>
-  //       <li>
-  //         {user.phone}
-  //       </li>
-  //     </div>
-  //   );
-  // });
 
-  // const listOfUsers = props.users.map(function (user,index) {
-  //   return (
-  //     <li>
-  //       {user.first_name}
-  //     </li>
-  //   );
-  // });
-  console.log(props.arrayOfUsers[0]);
   return (
     <div className="App">
       <div className="App-header">
@@ -39,10 +17,15 @@ function App(props) {
       <div className="App-intro">
         <h2>User List</h2>
         <ListOfUsers arrayOfUsers={props.arrayOfUsers} />
+        <hr /><h2>User Details</h2><hr />
         <UserDetails arrayOfUsers={props.arrayOfUsers} />
       </div>
     </div>
   );
 }
+
+App.propTypes = {
+  arrayOfUsers: PropTypes.array
+};
 
 export default App;
