@@ -4,11 +4,11 @@ import Header from "./Header";
 import ListOfUsers from "./ListOfUsers";
 import PropTypes from "prop-types";
 
-function App(props) {
+function App({users}) {
   return (
     <div className="App">
       <Header />
-      <ListOfUsers content={props.users} />
+      <ListOfUsers content={users} />
     </div>
   );
 }

@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import UserDetails from "./UserDetails";
 
 
-function ListOfUsers(props) {
+function ListOfUsers({content}) {
   return (
     <div>
       <p>
         Find a person
       </p>
-      {props.content.map((person) => {
+      {content.map((person) => {
         return (
           <UserDetails key={person.id} inner={person} />
         );
