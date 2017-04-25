@@ -1,5 +1,6 @@
 import React from "react";
 import UserDetail from "./UserDetail";
+import PropTypes from "prop-types";
 
 function Section2(props) {
   const first = props.user;
@@ -9,5 +10,9 @@ function Section2(props) {
     </div>
   );
 }
+
+Section2.propTypes = {
+  user: PropTypes.object
+};
 
 export default Section2;

@@ -2,6 +2,7 @@ import React from "react";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import PropTypes from "prop-types";
 
 function Main(props) {
   const first = props.user;
@@ -13,5 +14,10 @@ function Main(props) {
     </div>
   );
 }
+
+Main.propTypes = {
+  user: PropTypes.object,
+  users: PropTypes.array
+};
 
 export default Main;

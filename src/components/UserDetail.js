@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function UserDetail(props) {
   const firstName = (props.user.first_name);
@@ -9,5 +10,9 @@ function UserDetail(props) {
     </ul>
   );
 }
+
+UserDetail.propTypes = {
+  user: PropTypes.object
+};
 
 export default UserDetail;

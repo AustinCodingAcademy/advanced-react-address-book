@@ -4,7 +4,7 @@ import Header from "./Header";
 import Intro from "./Intro";
 import Main from "./Main";
 import Footer from "./Footer";
-import UserDetail from "./UserDetail";
+import PropTypes from "prop-types";
 
 function App(props) {
   const firstUser = props.users[0];
@@ -17,5 +17,9 @@ function App(props) {
     </div>
   );
 }
+
+App.propTypes = {
+  users: PropTypes.array
+};
 
 export default App;
