@@ -7,7 +7,7 @@ import users from "./users";
 
 function render() {
   ReactDOM.render(
-    <App />,
+    <App userArray={users} />,
     document.getElementById("root")
   );
 }
