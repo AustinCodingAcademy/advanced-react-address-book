@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 
 
 function UserDetails(props) {
-  const { first_name, last_name, phone, address, occupation} = Helpers.selectUser(props.arrayOfUsers, 0);
+  const { firstName, lastName, phone, address, occupation} = Helpers.selectUser(props.arrayOfUsers, 0);
   return (
     <div>
-      <p>{first_name}</p>
-      <p>{last_name}</p>
+      <p>{firstName}</p>
+      <p>{lastName}</p>
       <p>{phone}</p>
       <p>{address}</p>
       <p>{occupation}</p>
@@ -18,8 +18,8 @@ function UserDetails(props) {
 
 UserDetails.propTypes = {
   arrayOfUsers: PropTypes.shape({
-    first_name: PropTypes.string.isRequired,
-    last_name: PropTypes.string.isRequired,
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
   })
 };
 
