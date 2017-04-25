@@ -6,7 +6,7 @@ import users from "./users";
 
 function render() {
   ReactDOM.render(
-    <App users = {users}/>,
+    <App users={users} />,
     document.getElementById("root")
   );
 }

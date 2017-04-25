@@ -10,14 +10,11 @@ import LeftSidebar from "./LeftSidebar";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header headerMessage="I'm a Header!" />
       <SubHeader />
       <RightSidebar />
       <LeftSidebar />
-      <ol>
-        <Main />
-        <Main />
-      </ol>
+      <Main />
       <Footer />
     </div>
   );

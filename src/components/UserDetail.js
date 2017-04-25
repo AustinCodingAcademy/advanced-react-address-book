@@ -7,7 +7,7 @@ function UserDetail() {
     return (
       <div>
         <p>{user.first_name}</p>
-        <p>{user.last_name}</p>y
+        <p>{user.last_name}</p>
         <p>{user.address}</p>
         <p>{user.phone}</p>
         <p>{user.occupation}</p>
