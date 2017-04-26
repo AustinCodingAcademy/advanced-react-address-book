@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ListOfUsers(props) {
   const userList = props.users.map((user, index) => {
@@ -16,5 +17,9 @@ function ListOfUsers(props) {
     </div>
   );
 }
+
+ListOfUsers.propTypes = {
+  users: PropTypes.array.isRequired
+};
 
 export default ListOfUsers;
