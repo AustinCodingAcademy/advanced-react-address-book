@@ -12,7 +12,7 @@ function UserDetail(props) {
 }
 
 UserDetail.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.object.isRequired
 };
 
 export default UserDetail;

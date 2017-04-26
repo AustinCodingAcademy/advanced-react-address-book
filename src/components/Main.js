@@ -16,8 +16,8 @@ function Main(props) {
 }
 
 Main.propTypes = {
-  user: PropTypes.object,
-  users: PropTypes.array
+  user: PropTypes.object.isRequired,
+  users: PropTypes.array.isRequired
 };
 
 export default Main;

@@ -12,7 +12,7 @@ function Section2(props) {
 }
 
 Section2.propTypes = {
-  user: PropTypes.object
+  user: PropTypes.object.isRequired
 };
 
 export default Section2;

@@ -19,7 +19,7 @@ function App(props) {
 }
 
 App.propTypes = {
-  users: PropTypes.array
+  users: PropTypes.array.isRequired
 };
 
 export default App;

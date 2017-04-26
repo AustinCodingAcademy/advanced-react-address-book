@@ -11,7 +11,7 @@ function Section1(props) {
 }
 
 Section1.propTypes = {
-  users: PropTypes.array
+  users: PropTypes.array.isRequired
 };
 
 export default Section1;
