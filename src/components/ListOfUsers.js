@@ -7,7 +7,7 @@ function ListOfUsers(props) {
       <hr />
       {props.arrayOfUsers.map(user => {
         return (
-          <p> {user.firstName} </p>
+          <p key={name} > {user.firstName} </p>
         );
       })}
     </div>
