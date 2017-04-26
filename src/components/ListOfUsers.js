@@ -6,7 +6,7 @@ function ListOfUsers(props) {
     return (
       <ul key={index}>
         <li>
-          {user.first_name}
+          {user.firstName}
         </li>
       </ul>
     );
