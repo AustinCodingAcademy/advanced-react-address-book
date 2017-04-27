@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 
 
 function UserDetails(props) {
+  // const selectUser = (array, index) => array[index];
+  // commented out and saved in my "constants" folder
   const {firstName, lastName, phone, address, occupation, avatar} =
   Helpers.selectUser(props.arrayOfUsers, 0);
   return (
