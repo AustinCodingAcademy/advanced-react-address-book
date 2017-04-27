@@ -1,0 +1,11 @@
+
+
+.sidebarleft {
+  position: absolute;
+  top: 215px;
+  left: 10px;
+  bottom: 0;
+  background-color: powderblue;
+  padding: 1em;
+  max-width: 250px;
+}
