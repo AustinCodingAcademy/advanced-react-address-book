@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import ListOfUsers from "./components/ListOfUsers";
-import UserDetail from "./components/UserDetail";
 
 
 function App(props) {
@@ -9,7 +8,6 @@ function App(props) {
   return (
     <div className="App">
       <ListOfUsers users={props.users} />
-      <UserDetail user={props.users[0]} />
     </div>
   );
 }
