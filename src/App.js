@@ -1,17 +1,20 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import UserInfo from "./components/UserInfo";
+import UserDetail from "./components/UserDetail";
+import ListOfUsers from "./components/ListOfUsers";
+import CreateUser from "./components/CreateUser";
 
-function App() {
+function App(props) {
+  console.log(props);
+  console.log(props.users);
   return (
     <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <CreateUser />
+      <ListOfUsers users={props.users} />
+      <UserDetail user={props.users[0]} />
+      <UserInfo test={props} />
     </div>
   );
 }
