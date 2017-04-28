@@ -1,0 +1,8 @@
+.sidebarright {
+  position: absolute;
+  top: 215px;
+  right: 0;
+  bottom: 0;
+  background-color: powderblue;
+  padding: 1em;
+}
