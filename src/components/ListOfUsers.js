@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import UserDetail from "./UserDetail.js";
 import HideButton from "./HideButton.js";
 
 function ListOfUsers(props) {

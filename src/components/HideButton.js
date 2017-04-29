@@ -30,3 +30,7 @@ export default class HideButton extends React.Component {
   }
 
 }
+
+HideButton.propTypes = {
+  user: PropTypes.array,
+}

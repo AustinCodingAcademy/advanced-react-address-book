@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import UserDetail from "./UserDetail.js";
-import HideButton from "./HideButton.js"
+import HideButton from "./HideButton.js";
 
 function AlphabetLetters(props) {
   const letters = [
@@ -20,7 +19,7 @@ function AlphabetLetters(props) {
         {letter}
         {firstLetter.map((user) => {
           return firstLetter.length ? <HideButton key={user.id} user={user} /> :
-          <li> No Entries </li>
+          <li> No Entries </li>;
         }
           )
         }
