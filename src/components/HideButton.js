@@ -7,7 +7,7 @@ export default class HideButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
-    
+
   }
 
   handleClick() {
@@ -21,7 +21,7 @@ export default class HideButton extends React.Component {
     const {isToggleOn} = this.state;
     return (
       <li key={user.id}>
-        {isToggleOn ? <UserDetail key={user.id} item={user} /> : null}
+        <UserDetail toggled={isToggleOn} key={user.id} item={user} />
         <button onClick={() => this.handleClick()}>
           {isToggleOn ? "Hide" : "Show"}
         </button>

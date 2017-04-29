@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import UserDetail from "./UserDetail.js";
-
+import HideButton from "./HideButton.js"
 
 function AlphabetLetters(props) {
   const letters = [
@@ -9,9 +9,22 @@ function AlphabetLetters(props) {
     "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
   ];
 
+
+
   const AlphabetInsert = letters.map((letter) => {
+    const firstLetter = props.users.filter((user) => {
+      return user.lastName[0] === letter;
+    });
     return (
-      <ul key={letter.index}>{letter}</ul>
+      <ul key={letter.index}>
+        {letter}
+        {firstLetter.map((user) => {
+          return firstLetter.length ? <HideButton key={user.id} user={user} /> :
+          <li> No Entries </li>
+        }
+          )
+        }
+      </ul>
     );
   }
 );

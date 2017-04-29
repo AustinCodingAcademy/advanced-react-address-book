@@ -10,10 +10,10 @@
 * Send the first user from the array down into the UserDetail component -->
 
 ### Do
-* Add a button to the ListOfUsers component that says Hide
+<!-- * Add a button to the ListOfUsers component that says Hide
 * Add an onClick to the button and a handler
 * Make clicking the button hide the list and change the text to “Show”
-* If you click it again it will show the list and change the text back to “Hide”
+* If you click it again it will show the list and change the text back to “Hide” -->
 
 ### Do
 * Change ListOfUsers to be a class component

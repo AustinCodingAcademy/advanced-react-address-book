@@ -2,15 +2,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import HideButton from "./HideButton.js";
 
-function UserDetail({item}) {
+function UserDetail({item, toggled}) {
   return (
     <div>
       <h3> {item.firstName} </h3>
       <h3> {item.lastName} </h3>
-      <h4> {item.address} </h4>
-      <h4> {item.phone} </h4>
-      <h4> {item.occupation} </h4>
-      <h4> {item.avatar} </h4>
+      {
+        toggled ?
+          <div>
+            <h4> {item.address} </h4>
+              <h4> {item.phone} </h4>
+              <h4> {item.occupation} </h4>
+              <h4> {item.avatar} </h4>
+          </div>
+            : null
+    }
     </div>
   );
 
