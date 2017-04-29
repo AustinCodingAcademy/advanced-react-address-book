@@ -11,16 +11,16 @@
 
 ### Do
 <!-- * Add a button to the ListOfUsers component that says Hide -->
-* Add an onClick to the button and a handler
-* Make clicking the button hide the list and change the text to “Show”
-* If you click it again it will show the list and change the text back to “Hide”
+<!-- * Add an onClick to the button and a handler -->
+<!-- * Make clicking the button hide the list and change the text to “Show” -->
+<!-- * If you click it again it will show the list and change the text back to “Hide” -->
 
 ### Do
-* Change ListOfUsers to be a class component
-* Add a constructor
-* Add a property called “state” that is an object
-* Add a property on the state object called "visible"
-* Add a method called “render” that returns the jsx the function returned
+<!-- * Change ListOfUsers to be a class component -->
+<!-- * Add a constructor -->
+<!-- * Add a property called “state” that is an object -->
+<!-- * Add a property on the state object called "visible" -->
+<!-- * Add a method called “render” that returns the jsx the function returned -->
 
 ### Do
 * Add text box anywhere to ListOfUsers with a label “Search”

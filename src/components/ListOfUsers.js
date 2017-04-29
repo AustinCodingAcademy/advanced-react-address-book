@@ -1,11 +1,14 @@
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import UserDetail from "./UserDetail";
 
 class ListOfUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true
+      visible: true,
+      letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+        "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     };
   }
 
@@ -15,14 +18,20 @@ class ListOfUsers extends Component {
     });
   }
 
+  checkForEntry() {
+
+  }
+
   render() {
-    const userList = this.props.users.map((user, index) => {
+    const renderLetters = (users, letters) => letters.map((letter, index) => {
       if (this.state.visible) {
         return (
           <ul key={index}>
-            <li>
-              {user.firstName} {user.lastName}
-            </li>
+            <h1>{letter}</h1>
+            { users.map((user, index) => {
+              return (user.lastName.substring(0, 1).toUpperCase() === letter) ?
+                <UserDetail key={index} user={user} /> : null;
+            })}
           </ul>
         );
       } else {
@@ -32,7 +41,7 @@ class ListOfUsers extends Component {
 
     return (
       <div>
-        {userList}
+        { renderLetters && renderLetters(this.props.users, this.state.letters)}
         <button
           onClick={this.handleClick.bind(this)}>
           {this.state.visible ? "Hide" : "Show"}
