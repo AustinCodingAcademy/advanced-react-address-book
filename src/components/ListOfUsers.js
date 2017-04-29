@@ -5,19 +5,19 @@ class ListOfUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideButtonWasClicked: false,
+      visible: true
     };
   }
 
   handleClick() {
     this.setState({
-      hideButtonWasClicked: !this.state.hideButtonWasClicked
+      visible: !this.state.visible
     });
   }
 
   render() {
     const userList = this.props.users.map((user, index) => {
-      if (!this.state.hideButtonWasClicked) {
+      if (this.state.visible) {
         return (
           <ul key={index}>
             <li>
@@ -35,7 +35,7 @@ class ListOfUsers extends Component {
         {userList}
         <button
           onClick={this.handleClick.bind(this)}>
-          {this.state.hideButtonWasClicked ? "Show" : "Hide"}
+          {this.state.visible ? "Hide" : "Show"}
         </button>
       </div>
     );
