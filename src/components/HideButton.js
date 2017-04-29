@@ -1,24 +1,31 @@
 import React from "react";
 import PropTypes from "prop-types";
+import UserDetail from "./UserDetail.js";
 
-export default class Toggle extends React.Component {
+
+export default class HideButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = {isToggleOn: true};
-    this.handleClick = this.handleClick.bind(this);
+    
   }
 
-  handlClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
-    }));
+  handleClick() {
+    this.setState({
+      isToggleOn: !this.state.isToggleOn
+    });
   }
 
   render() {
+    const {user} = this.props;
+    const {isToggleOn} = this.state;
     return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? "Hide" : "Show"}
-      </button>
+      <li key={user.id}>
+        {isToggleOn ? <UserDetail key={user.id} item={user} /> : null}
+        <button onClick={() => this.handleClick()}>
+          {isToggleOn ? "Hide" : "Show"}
+        </button>
+      </li>
     );
   }
 

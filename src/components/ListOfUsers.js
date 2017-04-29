@@ -1,40 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import UserDetail from "./UserDetail.js";
+import HideButton from "./HideButton.js";
 
 function ListOfUsers(props) {
-  const userinfo = props.users.map((item) => {
-    return (
-      <UserDetail key={item.id} item={item} />
-    );
-  }
-<<<<<<< HEAD
-
-=======
->>>>>>> 98ed76d9e991a0c4d381d2845a7632b0d1487e7a
-  );
 
   return (
     <div>
-      <ul>
-        {userinfo}
-      </ul>
+      {
+        props.users.map((user) => {
+          return (
+            <HideButton key={user.id} user={user} />
+          );
+        })
+      }
     </div>
   );
-<<<<<<< HEAD
 }
 
-=======
 
-}
->>>>>>> 98ed76d9e991a0c4d381d2845a7632b0d1487e7a
+
+
+
 
 ListOfUsers.propTypes = {
   users: PropTypes.array
 };
 
 export default ListOfUsers;
-<<<<<<< HEAD
 
 
 
@@ -70,5 +63,3 @@ export default ListOfUsers;
 // });
 //
 // ReactDOM.render(<Search />, document.getElementById('container'));
-=======
->>>>>>> 98ed76d9e991a0c4d381d2845a7632b0d1487e7a

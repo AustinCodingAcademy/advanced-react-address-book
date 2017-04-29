@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import HideButton from "./HideButton.js";
 
 function UserDetail({item}) {
   return (
@@ -10,7 +11,6 @@ function UserDetail({item}) {
       <h4> {item.phone} </h4>
       <h4> {item.occupation} </h4>
       <h4> {item.avatar} </h4>
-
     </div>
   );
 
