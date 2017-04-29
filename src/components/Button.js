@@ -1,9 +1,15 @@
-import React from "react";
+import React, {Component} from "react";
 
-function Button() {
-  return (
-    <button>Hide</button>
-  );
+class Button extends Component {
+  constructor() {
+    super();
+  }
+
+  render() {
+    return (
+      <button>Hide</button>
+    );
+  }
 }
 
 export default Button;
