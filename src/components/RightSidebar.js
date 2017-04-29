@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
 import ListOfUsers from "./ListOfUsers";
+import UserDetail from "./UserDetail";
 
 function RightSidebar() {
   return (
-    <p className="App-RightSidebar">
-      Some cool users:
-      <ListOfUsers />
-    </p>
+    <div className="App-RightSidebar">
+      <p>Some cool users:</p>
+      <UserDetail />
+    </div>
   );
 }
 

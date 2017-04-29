@@ -1,14 +1,16 @@
 import React from "react";
 import "./App.css";
-import UserDetail from "./UserDetail";
+import Alphabet from "./Alphabet";
+import users from "../users";
 
 function Main() {
+  {// const allUsers = users.map(Alphabet);
+  }
   return (
-    <p className="App-intro">
-      OMG THIS IS REACT.
+    <div className="App-intro">
       THESE ARE ALL THE COOL USERS:
-      <UserDetail />
-    </p>
+      <Alphabet />
+    </div>
   );
 }
 

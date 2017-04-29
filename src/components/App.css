@@ -27,12 +27,11 @@
 }
 
 .App-RightSidebar{
-  float: right;
   background-color: #fa8072;
+  width: 250px;
 }
 
 .App-LeftSidebar{
-  float: left;
   background-color: #fa8072;
 }
 
