@@ -1,21 +1,29 @@
-import React from "react";
+import React, {Component} from "react";
 import PropTypes from "prop-types";
+import Button from "./Button";
 
-function ListOfUsers(props) {
-  const userList = props.users.map((user, index) => {
+class ListOfUsers extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const userList = this.props.users.map((user, index) => {
+      return (
+        <ul key={index}>
+          <li>
+            {user.firstName} {user.lastName}
+          </li>
+        </ul>
+      );
+    });
     return (
-      <ul key={index}>
-        <li>
-          {user.firstName}
-        </li>
-      </ul>
+      <div>
+        {userList}
+        <Button />
+      </div>
     );
-  });
-  return (
-    <div>
-      {userList}
-    </div>
-  );
+  }
 }
 
 ListOfUsers.propTypes = {
