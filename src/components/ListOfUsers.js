@@ -2,8 +2,6 @@ import React from "react";
 import "./App.css";
 import users from "../users";
 
-var currentUser;
-
 class ListOfUsers extends React.Component {
   constructor() {
     super();
