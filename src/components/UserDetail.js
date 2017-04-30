@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import PropTypes from "prop-types";
 
 const UserDetail = React.createClass({
   getInitialState: function () {
@@ -24,6 +23,7 @@ const UserDetail = React.createClass({
     }
   },
   render() {
+<<<<<<< HEAD
 
     const userItems = this.props.users.map((user, index) => {
       function setUpper(word) {
@@ -51,6 +51,8 @@ const UserDetail = React.createClass({
       );
     });
 
+=======
+>>>>>>> parent of bb2bf1b... Homework Eins 2
     return (
       <div>
         <button onClick={() => this.changeButtonText()}>
