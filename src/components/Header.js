@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import PropTypes from "prop-types";
 
 function Header(props) {
   return (
@@ -8,8 +7,8 @@ function Header(props) {
   );
 }
 
-Header.propTypes = {
-  Schild: PropTypes.string.isRequired
-};
+// Header.propTypes = {
+//   Schild: React.PropTypes.node,
+// };
 
 export default Header;

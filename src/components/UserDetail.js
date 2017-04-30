@@ -1,23 +1,34 @@
 import React from "react";
 import "./App.css";
+<<<<<<< HEAD
 import PropTypes from "prop-types";
 import Alphabet from "Alphabet";
+=======
+>>>>>>> parent of bb2bf1b... Homework Eins 2
 
-class UserDetail extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+const UserDetail = React.createClass({
+  getInitialState: function () {
+    return {
       value: "Hide",
-      hide: false
+      hide: true
     };
-  }
-  handleButton() {
+  },
+  changeButtonText() {
     this.setState({
-      hidden: !this.state.hidden,
-      value: this.state.hidden ? "Hide" : "Show"
+      hide: !this.state.hide
     });
-  }
+    if (this.state.hide) {
+      this.setState({
+        value: "Hide"
+      });
+    } else {
+      this.setState({
+        value: "Show"
+      });
+    }
+  },
   render() {
+<<<<<<< HEAD
     const userItems = this.props.users.map((user, index) => {
       function setUpper(word) {
         let firstLetter = word[0];
@@ -43,16 +54,16 @@ class UserDetail extends React.Component {
         </div>
       );
     });
+=======
+>>>>>>> parent of bb2bf1b... Homework Eins 2
     return (
       <div>
-        {userItems}
+        <button onClick={() => this.changeButtonText()}>
+          {this.state.value}
+        </button>
       </div>
     );
   }
-}
-
-UserDetail.propTypes = {
-  users: PropTypes.arrayOf(Object)
-};
+});
 
 export default UserDetail;

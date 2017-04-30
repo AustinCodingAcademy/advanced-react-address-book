@@ -8,7 +8,6 @@ import Funf from "./Funf";
 import ListOfUsers from "./ListOfUsers";
 import UserDetail from "./UserDetail";
 import users from "../users";
-import PropTypes from "prop-types";
 
 
 function App(props) {
@@ -27,17 +26,15 @@ function App(props) {
       <Drei />
       <ListOfUsers />
       <UserDetail users={users} />
+      {Menschen}
       <Vier />
       <Funf />
     </div>
   );
 }
 
-App.propTypes = {
-  users: PropTypes.arrayOf(PropTypes.shape({
-    first_name: PropTypes.string.isRequired,
-    last_name: PropTypes.string.isRequired
-  })).isRequired,
-};
+// App.propTypes = {
+//   users: React.PropTypes.node,
+// };
 
 export default App;
