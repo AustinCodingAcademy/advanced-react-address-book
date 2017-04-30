@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import HideButton from "./HideButton.js";
+import "./AlphabetLetters.css";
 
 function AlphabetLetters(props) {
   const letters = [
@@ -14,10 +15,12 @@ function AlphabetLetters(props) {
     const firstLetter = props.users.filter((user) => {
       return user.lastName[0] === letter;
     });
+
     return (
-      <ul key={letter.index}>
+      <ul className="AlphabetLetterscss" key={letter.index}>
         {letter}
         {firstLetter.map((user) => {
+          console.log(firstLetter);
           return firstLetter.length ? <HideButton key={user.id} user={user} /> :
           <li> No Entries </li>;
         }
@@ -30,6 +33,7 @@ function AlphabetLetters(props) {
 
   return (
     <ul>
+
       {AlphabetInsert}
     </ul>
   );
