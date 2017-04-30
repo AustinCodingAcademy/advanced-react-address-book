@@ -7,7 +7,7 @@ function RightSidebar() {
   return (
     <div className="App-RightSidebar">
       <p>Some cool users:</p>
-      <UserDetail />
+      <ListOfUsers />
     </div>
   );
 }

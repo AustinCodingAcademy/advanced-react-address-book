@@ -5,7 +5,7 @@ import "./App.js";
 function SubHeader() {
   return (
     <div className="App-Subheader">
-      <h2>Hello There! !!</h2>
+      <h2>Hello There!!!</h2>
     </div>
   );
 }
