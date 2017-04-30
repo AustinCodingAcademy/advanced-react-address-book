@@ -9,7 +9,7 @@ function Hund() {
     <div className="App-header">
       <Header Schild="LINKS" />
       <img src={Links} className="App-links" alt="Links" />
-      <h2>Wie geht es dir?</h2>
+      <h2>Wie geht es ihnen?</h2>
     </div>
   );
 }
