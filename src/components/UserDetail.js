@@ -1,8 +1,11 @@
 import React from "react";
 import "./App.css";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PropTypes from "prop-types";
 import Alphabet from "Alphabet";
+=======
+>>>>>>> parent of bb2bf1b... Homework Eins 2
 =======
 >>>>>>> parent of bb2bf1b... Homework Eins 2
 
@@ -29,6 +32,7 @@ const UserDetail = React.createClass({
   },
   render() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const userItems = this.props.users.map((user, index) => {
       function setUpper(word) {
         let firstLetter = word[0];
@@ -54,6 +58,8 @@ const UserDetail = React.createClass({
         </div>
       );
     });
+=======
+>>>>>>> parent of bb2bf1b... Homework Eins 2
 =======
 >>>>>>> parent of bb2bf1b... Homework Eins 2
     return (
