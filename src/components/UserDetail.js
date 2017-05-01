@@ -12,19 +12,19 @@ function setUpper(word) {
 
 function SearchUser({letter, users}) {
   const filteredUsers = [];
-  users.map((user) => {
+  users.map((user, index) => {
     if (user.last_name[0] === letter) {
-      const name = setUpper(user.first_name) + ", " + setUpper(user.last_name) + " ";
+      const name = (
+        <div key={index}>
+          {setUpper(user.last_name) + ", " + setUpper(user.first_name)}
+        </div>
+      );
       filteredUsers.push(name);
     }
   });
   if (filteredUsers.length === 0) {
     filteredUsers.push("No Entry");
   }
-  // for (let i = 0; i < filteredUsers.length; i++) {
-  //   var string = " ";
-  //   string +=
-  // }
   return (
     <div>
       ## {letter.toUpperCase()}
