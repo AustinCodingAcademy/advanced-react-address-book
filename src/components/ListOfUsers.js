@@ -2,10 +2,10 @@ import React, {Component} from "react";
 import PropTypes from "prop-types";
 
 class ListOfUsers extends Component {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(props);
     this.state = {
-      userWasClicked: false
+      buttonClicked: false
     };
   }
 
@@ -13,19 +13,28 @@ class ListOfUsers extends Component {
     console.log("Handle Click", event);
 
     this.setState({
-      userWasClicked: !this.state.userWasClicked
+      buttonClicked: !this.state.buttonClicked
     });
   }
 
   render() {
+    if (!this.state.buttonClicked) {
+      return (
+        <div>
+          <hr />
+          {this.props.arrayOfUsers.map(user => {
+            return (
+              <p key={user.id} onClick={this.handleUserClick.bind(this)} > {user.firstName} </p>
+            );
+          })}
+        </div>
+      );
+    }
     return (
       <div>
-        <hr />
-        {this.props.arrayOfUsers.map(user => {
-          return (
-            <p key={user.id} onClick={this.handleUserClick.bind(this)} > {user.firstName} </p>
-          );
-        })}
+        <button onClick={this.handleUserClick.bind(this)}>
+          {this.state.buttonClicked ? "Show Names" : "Hide Names"}
+        </button>
       </div>
     );
   }
@@ -46,7 +55,7 @@ class ListOfUsers extends Component {
 // }
 
 ListOfUsers.propTypes = {
-  arrayOfUsers: PropTypes.array
+  arrayOfUsers: PropTypes.array.isRequired
 };
 
 export default ListOfUsers;
