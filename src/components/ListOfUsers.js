@@ -16,9 +16,9 @@ function printUsers(user) {
   return (
     <div>
       <p>{user.last_name}, {user.first_name}</p>
-      <div>
-        <Button />
-        <userDetail key={user.id} />
+      <Button />
+      <div id="showDetail">
+        {userDetail}
       </div>
     </div>
   );

@@ -18,6 +18,10 @@
   font-size: large;
 }
 
+.hide-true {
+  display: none;
+}
+
 .App-footer{
   background-color: #222;
   height: 75px;
