@@ -1,29 +1,21 @@
 import React from "react";
 import "./App.css";
 
-const UserDetail = React.createClass({
-  getInitialState: function () {
-    return {
+class UserDetail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       value: "Hide",
-      hide: true
+      hide: false
     };
-  },
-  changeButtonText() {
+  }
+  handleButton() {
     this.setState({
-      hide: !this.state.hide
+      hide: !this.state.hide,
+      value: this.state.hide ? "Hide" : "Show"
     });
-    if (this.state.hide) {
-      this.setState({
-        value: "Hide"
-      });
-    } else {
-      this.setState({
-        value: "Show"
-      });
-    }
-  },
+  }
   render() {
-<<<<<<< HEAD
 
     const userItems = this.props.users.map((user, index) => {
       function setUpper(word) {
@@ -51,16 +43,12 @@ const UserDetail = React.createClass({
       );
     });
 
-=======
->>>>>>> parent of bb2bf1b... Homework Eins 2
     return (
       <div>
-        <button onClick={() => this.changeButtonText()}>
-          {this.state.value}
-        </button>
+        {userItems}
       </div>
     );
   }
-});
+}
 
 export default UserDetail;
