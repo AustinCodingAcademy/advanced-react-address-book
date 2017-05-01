@@ -1,5 +1,43 @@
 import React from "react";
 import "./App.css";
+import PropTypes from "prop-types";
+
+function setUpper(word) {
+  let firstLetter = word[0];
+  firstLetter = firstLetter.toUpperCase();
+  const secondPart = word.slice(1);
+  const newWord = firstLetter + secondPart;
+  return newWord;
+}
+
+function SearchUser({letter, users}) {
+  const filteredUsers = [];
+  users.map((user) => {
+    if (user.last_name[0] === letter) {
+      const name = setUpper(user.first_name) + ", " + setUpper(user.last_name) + " ";
+      filteredUsers.push(name);
+    }
+  });
+  if (filteredUsers.length === 0) {
+    filteredUsers.push("No Entry");
+  }
+  // for (let i = 0; i < filteredUsers.length; i++) {
+  //   var string = " ";
+  //   string +=
+  // }
+  return (
+    <div>
+      ## {letter.toUpperCase()}
+      <br />
+      {filteredUsers}
+    </div>
+  );
+}
+
+SearchUser.propTypes = {
+  letter: PropTypes.string.isRequired,
+  users: PropTypes.array.isRequired
+};
 
 class UserDetail extends React.Component {
   constructor(props) {
@@ -16,29 +54,12 @@ class UserDetail extends React.Component {
     });
   }
   render() {
-
-    const userItems = this.props.users.map((user, index) => {
-      function setUpper(word) {
-        let firstLetter = word[0];
-        firstLetter = firstLetter.toUpperCase();
-        const secondPart = word.slice(1);
-        const newWord = firstLetter + secondPart;
-        return newWord;
-      }
-      /*
-      # loop through each of the alphabet letters (a through z)
-      # determine if there is user(s) for the leter (user.first_name)
-      # if yes, return the name of the user
-      # if no, return "no entry" (ternery operator)
-      */
-      const name = setUpper(user.first_name) + " " + setUpper(user.last_name);
+    const Alphabet = ["a","b","c","d","e","f","g","h","i","j","k",
+      "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    const userItems = Alphabet.map((letter, index) => {
       return (
         <div key={index}>
-          <li>{name}
-            <button onClick={() => this.handleButton()}>
-              {this.state.value}
-            </button>
-          </li>
+          <SearchUser letter={letter} users={this.props.users} />
         </div>
       );
     });
@@ -50,5 +71,9 @@ class UserDetail extends React.Component {
     );
   }
 }
+
+UserDetail.propTypes = {
+  users: PropTypes.array
+};
 
 export default UserDetail;
