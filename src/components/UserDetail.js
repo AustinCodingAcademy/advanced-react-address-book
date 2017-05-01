@@ -1,29 +1,31 @@
-import React from "react";
+import React, {Component} from "react";
+import propTypes from "prop-types";
 
 
-function UserDetail(props) {
+class UserDetail extends Component {
+  constructor (...args) {
+    super(...args);
+    this.state = {
+      userWasClicked: false
+    };
+  }
 
-  // const details=props.userDetails.map(function(userDetails,index){
-  //   return (
-  //     <div key={index}>
-  //       {userDetails.address} {userDetails.Phone} {userDetails.occupation}
-  //     </div>
-  //   );
-  // });
-
-const address = props.userDetails[0].address;
-const avatar = props.userDetails[0].avatar;
-const occupation = props.userDetails[0].occupation;
-const phone = props.userDetails[0].phone;
-
+render(){
+//  console.log(this.props)
   return (
     <div>
-      <h3> User Details</h3>
-    <hr />
-      {address} <br /> {occupation} <br /> {phone} <br /> <img src={avatar} />
+
     </div>
   );
-
 }
+}
+
+UserDetail.propTypes = {
+  userDetail: propTypes.shape({
+    first_name: propTypes.string,
+    last_name: propTypes.string,
+  })
+};
+
 
 export default UserDetail;
