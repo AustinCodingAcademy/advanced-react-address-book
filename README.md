@@ -1,6 +1,20 @@
 ### Setup
 * From address book directory, run yarn install, yarn start
 
+
+##### A note for Windows users about line-endings
+- If you're getting errors like this:
+
+```bash
+(linebreak-style) Expected linebreaks to be 'LF' but found 'CRLF'. (eslint)
+```
+You can fix this by changing how Atom parses line endings in your code. (Meaning how it knows where you hit `Enter`).
+By default, you should have [this plugin](https://github.com/atom/line-ending-selector) installed, which will allow you to change your line-ending encoding:
+
+**1. Click on this section in the bottom-right of your screen.**
+![](https://cloud.githubusercontent.com/assets/1305617/9274149/6b317568-4293-11e5-83ba-614a6c0d9890.png)
+**2. Then just select `LF`. The errors should go away.**
+![](https://cloud.githubusercontent.com/assets/1305617/9273907/2be5c136-4291-11e5-94af-65ece408eb12.png)
 ### Do
 * Import the array of users into index.js
 * Create a folder in src called components to hold all our components
