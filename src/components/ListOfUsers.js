@@ -7,6 +7,7 @@ class ListOfUsers extends Component {
     super(props);
     this.state = {
       visible: true,
+      searchText: "",
       letters: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
         "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     };
@@ -16,10 +17,6 @@ class ListOfUsers extends Component {
     this.setState({
       visible: !this.state.visible
     });
-  }
-
-  checkForEntry() {
-
   }
 
   render() {
@@ -41,7 +38,19 @@ class ListOfUsers extends Component {
 
     return (
       <div>
-        { renderLetters && renderLetters(this.props.users, this.state.letters)}
+        <form>
+          <input
+            type="text"
+            label="Search"
+            value={this.state.searchText}
+            onChange={(event) => {
+              this.setState({
+                searchText: event.target.value
+              });
+            }}
+          />
+        </form>
+        {renderLetters && renderLetters(this.props.users, this.state.letters)}
         <button
           onClick={this.handleClick.bind(this)}>
           {this.state.visible ? "Hide" : "Show"}

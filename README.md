@@ -1,7 +1,7 @@
 ### Setup
 * From address book directory, run yarn install, yarn start
 
-### Do
+### Do: COMPLETE
 <!-- * Import the array of users into index.js
 * Create a folder in src called components to hold all our components
 * Create the UserDetail and ListOfUsers functional components
@@ -9,23 +9,23 @@
 * Send the user array into Apps and then into ListOfUsers
 * Send the first user from the array down into the UserDetail component -->
 
-### Do
+### Do: COMPLETE
 <!-- * Add a button to the ListOfUsers component that says Hide -->
 <!-- * Add an onClick to the button and a handler -->
 <!-- * Make clicking the button hide the list and change the text to “Show” -->
 <!-- * If you click it again it will show the list and change the text back to “Hide” -->
 
-### Do
+### Do: COMPLETE
 <!-- * Change ListOfUsers to be a class component -->
 <!-- * Add a constructor -->
 <!-- * Add a property called “state” that is an object -->
 <!-- * Add a property on the state object called "visible" -->
 <!-- * Add a method called “render” that returns the jsx the function returned -->
 
-### Do
-* Add text box anywhere to ListOfUsers with a label “Search”
-* In ListOfUsers add a state property “searchText”, default to “”
-* Assign searchText to the value attribute of the text box
+### Do: COMPLETE
+<!-- * Add text box anywhere to ListOfUsers with a label “Search”
+* In ListOfUsers add a state property “searchText”, default to “” -->
+<!-- * Assign searchText to the value attribute of the text box -->
 
 ### Do
 * Add onChange to text box
