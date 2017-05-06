@@ -4,6 +4,10 @@ import App from "./components/App";
 import "./index.css";
 import users from "./users";
 
+// function selectUser(user) {
+//   const currentUser = user;
+//   return currentUser;
+// }
 
 function render() {
   ReactDOM.render(

@@ -9,7 +9,7 @@ function Main(props) {
     <div className="Main-container">
       <Section1 users={props.users} />
       <Section2 users={props.users} />
-      <Section3 />
+      <Section3 user={props.user} />
     </div>
   );
 }
