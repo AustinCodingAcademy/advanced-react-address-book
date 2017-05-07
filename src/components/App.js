@@ -5,16 +5,20 @@ import Main from "./Main";
 import PropTypes from "prop-types";
 
 function App(props) {
-  const firstUser = props.users[0];
   return (
     <div className="App">
       <Header />
-      <Main users={props.users} user={firstUser} />
+      <Main
+        users={props.users}
+        userSelect={props.userSelect}
+        currentUser={props.currentUser}
+      />
     </div>
   );
 }
 
 App.propTypes = {
+  userSelect: PropTypes.func.isRequired,
   users: PropTypes.array.isRequired
 };
 

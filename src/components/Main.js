@@ -1,21 +1,26 @@
 import React from "react";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
-import Section3 from "./Section3";
 import PropTypes from "prop-types";
 
 function Main(props) {
   return (
     <div className="Main-container">
-      <Section1 users={props.users} />
-      <Section2 users={props.users} />
-      <Section3 user={props.user} />
+      <Section1
+        users={props.users}
+        userSelect={props.userSelect}
+        currentUser={props.currentUser}
+      />
+      <Section2
+        users={props.users}
+      />
     </div>
   );
 }
 
 Main.propTypes = {
-  user: PropTypes.object.isRequired,
+  userSelect: PropTypes.func.isRequired,
+  user: PropTypes.object,
   users: PropTypes.array.isRequired
 };
 
