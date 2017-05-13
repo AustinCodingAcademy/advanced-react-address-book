@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import UserDetail from "./UserDetail";
+import UserDetail2 from "./UserDetail2";
 
 
 function AlphabetLetters(props) {
@@ -13,7 +13,7 @@ function AlphabetLetters(props) {
         return (
           <div key={index}>
             <h4> {letter} </h4>
-            <UserDetail users={props.users} />
+            <UserDetail2 users={props.users} />
           </div>
         );
       }
