@@ -28,7 +28,7 @@ function Alphabet() {
 
   return (
     <div>
-      <p>{alphabetList}</p>
+      {alphabetList}
     </div>
   );
 }

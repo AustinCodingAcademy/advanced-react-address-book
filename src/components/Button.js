@@ -1,23 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, {Component} from "react";
 import "./App.css";
+import UserDetail from "./UserDetail";
 
-const Button = React.createClass({
+class Button extends Component {
   getInitialState() {
-    return { visible: false };
-  },
+    this.state = {showUserDetail: false};
+  }
   onClick() {
-    this.setState({ visible: !this.state.visible});
-  },
+    this.setState({ showUserDetail: true});
+  }
   render() {
+    const userDetail = UserDetail();
     return (
       <div>
-        <input type="submit" value="Show Details" onClick={this.toggle} />
-        {this.state.visible ? <fuserDetail /> : null}
-        <div className={this.state.visible ? "some-content" : ""}>Hi there!</div>
+        <input type="submit" value="Show" onClick={this.onClick.bind(this)} />
+        {this.state.showUserDetail ? <userDetail /> : null}
       </div>
     );
+
   }
-});
+}
 
 export default Button;

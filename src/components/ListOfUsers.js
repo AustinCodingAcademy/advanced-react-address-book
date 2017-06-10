@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import users from "../users";
 import Button from "./Button";
-import UserDetail from "./UserDetail";
+// import UserDetail from "./UserDetail";
 
 function ListOfUsers() {
   const allUsers = users.map(printUsers);
@@ -11,14 +11,14 @@ function ListOfUsers() {
   );
 }
 
-function printUsers(user) {
-  const userDetail = UserDetail(user);
+function printUsers(user, index) {
+//  const userDetail = UserDetail(user);
+  console.log("hello" + user, index);
   return (
     <div>
       <p>{user.last_name}, {user.first_name}</p>
-      <Button />
       <div id="showDetail">
-        {userDetail}
+        <Button />
       </div>
     </div>
   );
