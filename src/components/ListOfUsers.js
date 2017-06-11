@@ -2,23 +2,20 @@ import React from "react";
 import "./App.css";
 import users from "../users";
 import Button from "./Button";
-// import UserDetail from "./UserDetail";
 
 function ListOfUsers() {
   const allUsers = users.map(printUsers);
   return (
-    <div>{allUsers}</div>
+    <div key={allUsers.id} >{allUsers}</div>
   );
 }
 
-function printUsers(user, index) {
-//  const userDetail = UserDetail(user);
-  console.log("hello" + user, index);
+function printUsers(user) {
   return (
-    <div>
+    <div key={user.id} id={"container-" + user.id}>
       <p>{user.last_name}, {user.first_name}</p>
       <div id="showDetail">
-        <Button />
+        <Button user={user} />
       </div>
     </div>
   );

@@ -3,3 +3,17 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.user-detail {
+  padding: 3px;
+  margin: 3px 0;
+  background-color: rgba(83, 154, 83, 0.89);
+  color: white;
+}
+[id*='container-'].active {
+  background-color: rgba(83, 154, 83, 0.89);
+  color: white;
+}
+[id*='container-'] input {
+  color: black;
+}

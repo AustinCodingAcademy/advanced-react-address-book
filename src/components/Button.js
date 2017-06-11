@@ -1,20 +1,35 @@
 import React, {Component} from "react";
+import PropTypes from "prop-types";
 import "./App.css";
-import UserDetail from "./UserDetail";
 
 class Button extends Component {
-  getInitialState() {
-    this.state = {showUserDetail: false};
+  constructor(props) {
+    super(props);
+    this.state = {showUserDetail: false, value: "Show"};
   }
-  onClick() {
-    this.setState({ showUserDetail: true});
+
+  handleClick() {
+    this.setState(prevState => ({showUserDetail: !prevState.showUserDetail}));
+    document.getElementById("container-" + this.props.user.id).classList.toggle("active");
+
+    if (this.state.showUserDetail) {
+      this.setState({value: "Show"});
+    } else {
+      this.setState({value: "Hide"});
+    }
   }
+
   render() {
-    const userDetail = UserDetail();
     return (
       <div>
-        <input type="submit" value="Show" onClick={this.onClick.bind(this)} />
-        {this.state.showUserDetail ? <userDetail /> : null}
+        <input type="submit" value={this.state.value} onClick={this.handleClick.bind(this)} />
+        {this.state.showUserDetail ?
+          <div className="user-detail">
+            <p>hello</p>
+            <p>{this.props.user.address}</p>
+            <p>{this.props.user.phone}</p>
+            <p>{this.props.user.occupation}</p>
+          </div> : null }
       </div>
     );
 
@@ -22,3 +37,7 @@ class Button extends Component {
 }
 
 export default Button;
+
+Button.propTypes = {
+  user: PropTypes.object.isRequired
+};
