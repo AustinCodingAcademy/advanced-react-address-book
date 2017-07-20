@@ -1,4 +1,5 @@
 import React from 'react';
+// import SelectUser from './index.js';
 
 class ListOfUsers extends React.Component {
   constructor(props) {
@@ -18,22 +19,22 @@ class ListOfUsers extends React.Component {
   }
 
   changeInput(event) {
-    // event.preventDefault();
+    event.preventDefault();
     this.setState({
       searchText: event.target.value
     })
-  }
+  };
 
   render() {
     const userDivs = this.props.users.map((user) => {
-      if (this.state.toggleOn) return <div>{user.first_name}</div>;
+      if (this.state.toggleOn) return <li>{user.first_name}</li>;
       else return <div></div>
     })
 
     return (
       <div>
         <input label='Search' placeholder="type here" onChange={this.changeInput}/>
-        {userDivs}
+        <ul onClick={this.props.SelectUser}>{userDivs}</ul>
         <button onClick={this.handleClick}>{this.state.toggleOn ? 'HIDE' : 'SHOW'}</button>
       </div>
     )

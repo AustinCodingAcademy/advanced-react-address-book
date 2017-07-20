@@ -17,8 +17,8 @@ function App(props) {
 
 
               <div>
-              <ListOfUsers users={props.users} />
-              <UserDetail user={props.users[0]} />
+                <ListOfUsers users={props.users} />
+                <UserDetail user={props.user} />
               </div>
 
 
