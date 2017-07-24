@@ -33,7 +33,7 @@ class ListOfUsers extends React.Component {
 
   render() {
     const userDivs = this.props.users.map((user) => {
-      if (this.state.toggleOn) return <div>{user.first_name}</div>;
+      if (this.state.toggleOn) return <div key={user.id}>{user.first_name}</div>;
       else return <div></div>
     })
 
