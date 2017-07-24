@@ -5,7 +5,7 @@ class ListOfUsers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggleOn: true,
+      visible: true,
       searchText: ''
     };
 
@@ -15,13 +15,13 @@ class ListOfUsers extends React.Component {
 
   buttonClick = () => {
     this.setState(prevState => ({
-      toggleOn: !prevState.toggleOn
+      visible: !prevState.visible
     }));
   }
 
   userSelected = (chosenOne) => {
     console.log(chosenOne);
-    SelectUser(chosenOne)
+    // SelectUser(chosenOne)
   }
 
   changeInput(event) {
@@ -33,7 +33,7 @@ class ListOfUsers extends React.Component {
 
   render() {
     const userDivs = this.props.users.map((user) => {
-      if (this.state.toggleOn) return <div key={user.id} onClick={this.userSelected(user)}>{user.first_name}</div>;
+      if (this.state.visible) return <div key={user.id} onClick={this.userSelected(user)}>{user.first_name}</div>;
       else return <div></div>
     })
 
@@ -41,7 +41,7 @@ class ListOfUsers extends React.Component {
       <div>
         <input label='Search' placeholder="search" onChange={this.changeInput}/>
         <div>{userDivs}</div>
-        <button onClick={this.buttonClick}>{this.state.toggleOn ? 'HIDE' : 'SHOW'}</button>
+        <button onClick={this.buttonClick}>{this.state.visible ? 'HIDE' : 'SHOW'}</button>
       </div>
     )
   }

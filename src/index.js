@@ -7,7 +7,7 @@ import users from "./users";
 var currentUser = '';
 
 function SelectUser(user) {
-  console.log(user);
+  // console.log(user);
   currentUser = user;
 };
 
