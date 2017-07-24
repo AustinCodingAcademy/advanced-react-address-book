@@ -33,14 +33,14 @@ class ListOfUsers extends React.Component {
 
   render() {
     const userDivs = this.props.users.map((user) => {
-      if (this.state.toggleOn) return <div key={user.id}>{user.first_name}</div>;
+      if (this.state.toggleOn) return <div key={user.id} onClick={this.userSelected(user)}>{user.first_name}</div>;
       else return <div></div>
     })
 
     return (
       <div>
         <input label='Search' placeholder="search" onChange={this.changeInput}/>
-        <div onClick={this.userSelected}>{userDivs}</div>
+        <div>{userDivs}</div>
         <button onClick={this.buttonClick}>{this.state.toggleOn ? 'HIDE' : 'SHOW'}</button>
       </div>
     )
