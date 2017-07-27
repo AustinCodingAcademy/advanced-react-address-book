@@ -4,11 +4,21 @@ import App from "./App";
 import "./index.css";
 import users from "./users";
 
+let currentUser = 0;
+
+function selectUser(user) {
+  currentUser = user;
+  render();
+}
 
 function render() {
   ReactDOM.render(
-    <App />,
+    <App
+      users={users}
+      currentUser={currentUser}
+      selectUser={selectUser} />,
     document.getElementById("root")
   );
 }
+
 render();
