@@ -1,9 +1,13 @@
 import React from 'react';
 
-// console.log({props.user.first_name});
-
 function UserDetail(props) {
-  return <div>{props.user}</div>
+  return <div>
+    <h1>{props.selectedUser.first_name} {props.selectedUser.last_name}</h1>
+    <div>{props.selectedUser.address}</div>
+    <div>{props.selectedUser.phone}</div>
+    <div>{props.selectedUser.occupation}</div>
+    <div><img src={props.selectedUser.avatar} /></div>
+  </div>
 }
 
 export default UserDetail;

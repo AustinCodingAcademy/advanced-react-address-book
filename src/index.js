@@ -6,21 +6,20 @@ import users from "./users";
 
 var currentUser = '';
 
-function SelectUser(user) {
-  // console.log(user);
+function selectUser(user) {
   currentUser = user;
+  render();
 };
-
-console.log(currentUser);
 
 function render() {
   ReactDOM.render(
     <App
     users={users}
-    user={currentUser} />,
+    selectUser={selectUser}
+    selectedUser={currentUser} />,
     document.getElementById("root")
   );
 }
 render();
 
-export default SelectUser;
+export default selectUser;
