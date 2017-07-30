@@ -11,7 +11,7 @@ class ListOfUsers extends React.Component {
       searchText: ""
     };
   }
-  searchHandler() {
+  searchHandler(event) {
     this.setState({
       searchText: event.target.value
     });
