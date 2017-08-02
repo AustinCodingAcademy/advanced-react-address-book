@@ -46,7 +46,7 @@ class ListOfUsers extends React.Component {
 
     return (
       <div>
-        <input label='Search' placeholder="search" onChange={this.changeInput}/>
+        <input label='Search' placeholder="search" onChange={this.changeInput} />
         <div>{userDivs}</div>
         <button onClick={this.buttonClick}>{this.state.visible ? 'HIDE' : 'SHOW'}</button>
       </div>
@@ -54,5 +54,14 @@ class ListOfUsers extends React.Component {
   }
 
 }
+
+// var filterUsers = this.props.users.filter((u) => {
+//   if(this.state.searchText == "") {
+//     return true;
+//   }
+//   if(u.last_name.indexOf(this.state.searchText) > -1 {
+//     return true;
+//   } else return false;
+// })
 
 export default ListOfUsers;
