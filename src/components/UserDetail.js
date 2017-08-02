@@ -6,7 +6,7 @@ function UserDetail(props) {
     <div>{props.selectedUser.address}</div>
     <div>{props.selectedUser.phone}</div>
     <div>{props.selectedUser.occupation}</div>
-    <div><img src={props.selectedUser.avatar} /></div>
+    <div><img src={props.selectedUser.avatar} alt="" /></div>
   </div>
 }
 
