@@ -21,14 +21,22 @@ class ListOfUsers extends React.Component {
       searchText : event.target.value,
     });
   }
+
   render() {
     // console.log(this.state.searchText);
     const userDivs = this.props.users.map(user => {
       if(this.state.visible) {
-        return <div key={user.id}>{user.first_name}</div>
+        return (
+          <div key={user.id}>
+            {user.first_name}
+            <a href="#" onClick={
+                () => {
+                  this.props.selectUser(user);
+                }
+              }>View</a>
+          </div>);
       }
     });
-
 
     return (
       <div>

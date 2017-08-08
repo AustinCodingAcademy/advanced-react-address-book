@@ -7,8 +7,8 @@ import users from "./users";
 let currentUser = "";
 
 function selectUser(user) {
-  return currentUser === user;
-
+  currentUser = user;
+  render();
 }
 
 function render() {

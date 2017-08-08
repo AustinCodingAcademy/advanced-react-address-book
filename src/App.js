@@ -14,8 +14,6 @@ function App(props) {
       />
 
       <UserDetail
-        user={props.users[0]}
-        selectUser={props.selectUser}
         currentUser={props.currentUser}
       />
     </div>
