@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 
 class ListOfUsers extends React.Component {
   constructor(props) {
@@ -27,7 +29,7 @@ class ListOfUsers extends React.Component {
 
   render() {
 
-    // filterUsers filters the 
+    // filterUsers filters the
     var filterUsers = this.props.users.filter((u) => {
       if(this.state.searchText === "") {
         return true;
@@ -42,8 +44,8 @@ class ListOfUsers extends React.Component {
 
         return <div key={user.id}>
             {user.first_name}
-            <a onClick={ () => {this.props.selectUser(user)} }> View </a>
-          </div>
+            <a onClick={ () => {this.props.selectedUser(user)} }> View </a>
+        </div>
       }
       else return <div></div>
     });
@@ -57,16 +59,18 @@ class ListOfUsers extends React.Component {
       </div>
     )
   }
-
 }
 
-// var filterUsers = this.props.users.filter((u) => {
-//   if(this.state.searchText == "") {
-//     return true;
-//   }
-//   if(u.last_name.indexOf(this.state.searchText) > -1 {
-//     return true;
-//   } else return false;
-// })
+  function mapStateToProps(state) {
+    return {
+      users: state.users
+    }
+  }
 
-export default ListOfUsers;
+  var otherFunction = connect(mapStateToProps);
+  const ListOfUsersContainer = otherFunction(ListOfUsers);
+  export default ListOfUsersContainer
+
+
+
+// export default ListOfUsers;
