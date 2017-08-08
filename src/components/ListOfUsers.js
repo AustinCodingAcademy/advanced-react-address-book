@@ -24,11 +24,18 @@ class ListOfUsers extends React.Component {
 
   render() {
     // console.log(this.state.searchText);
-    const userDivs = this.props.users.map(user => {
+    const filterUsers = this.props.users.filter(u => {
+      if(this.state.searchText === "") {
+        return true;
+      }
+      return u.last_name.indexOf(this.state.searchText) > -1;
+    });
+
+    const userDivs = filterUsers.map(user => {
       if(this.state.visible) {
         return (
           <div key={user.id}>
-            {user.first_name}
+            {user.first_name} - {user.last_name}
             <a href="#" onClick={
                 () => {
                   this.props.selectUser(user);
