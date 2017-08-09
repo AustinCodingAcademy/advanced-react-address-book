@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import {setCurrentUser} from '../actions';
 
 class ListOfUsers extends React.Component {
   constructor(props) {
@@ -9,7 +9,6 @@ class ListOfUsers extends React.Component {
       visible: true,
       searchText: ""
     };
-
     // this.buttonClick = this.buttonClick.bind(this);
     // this.props.SelectUser = this.props.SelectUser.bind(this);
   }
@@ -44,7 +43,7 @@ class ListOfUsers extends React.Component {
 
         return <div key={user.id}>
             {user.first_name}
-            <a onClick={ () => {this.props.selectedUser(user)} }> View </a>
+            <a onClick={ (e) => {e.preventDefault(); this.props.setCurrentUser(user)} }> View </a>
         </div>
       }
       else return <div></div>
@@ -67,10 +66,15 @@ class ListOfUsers extends React.Component {
     }
   }
 
-  var otherFunction = connect(mapStateToProps);
-  const ListOfUsersContainer = otherFunction(ListOfUsers);
-  export default ListOfUsersContainer
+  function mapDispatchToProps(dispatch){
+   return {
+     setCurrentUser:function(user){
+       dispatch(setCurrentUser(user));
+     }
+   }
+  }
 
+  export default connect(mapStateToProps, mapDispatchToProps)(ListOfUsers);;
 
 
 // export default ListOfUsers;

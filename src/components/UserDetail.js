@@ -14,11 +14,10 @@ function UserDetail(props) {
 
 function mapStateToProps(state) {
   return {
-    selectedUser: state.selectedUser
+    selectedUser: state.currentUser
   }
 }
 
-var otherFunction = connect(mapStateToProps);
-const UserDetailContainer = otherFunction(UserDetail);
+const UserDetailContainer = connect(mapStateToProps)(UserDetail);
 export default UserDetailContainer
 // export default UserDetail;

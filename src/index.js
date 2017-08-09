@@ -6,12 +6,12 @@ import store from "./store";
 import {Provider} from 'react-redux';
 
 
-var currentUser = '';
-
-function selectUser(user) {
-  currentUser = user;
-  render();
-};
+// var selectedUser = '';
+//
+// function selectUser(user) {
+//   selectedUser = user;
+//   render();
+// };
 
 function render() {
   ReactDOM.render(
@@ -21,4 +21,4 @@ function render() {
 }
 render();
 
-export default selectUser;
+// export default selectUser;

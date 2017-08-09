@@ -9,12 +9,15 @@ function searchText(state="", action) {
   return state;
 }
 
-function selectedUser(state={}, action) {
+function currentUser(state={}, action) {
+  if (action.type === "SET_CURRENT_USER") {
+    return action.value;
+  }
   return state;
 }
 
 
 const rootReducer = combineReducers({
- users,searchText,selectedUser
+ users,searchText,currentUser
 });
 export default rootReducer;
