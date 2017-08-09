@@ -6,8 +6,7 @@ class ListOfUsers extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: true,
-      searchText: ""
+      visible: true
     };
     // this.buttonClick = this.buttonClick.bind(this);
     // this.props.SelectUser = this.props.SelectUser.bind(this);
@@ -19,21 +18,15 @@ class ListOfUsers extends React.Component {
     }));
   }
 
-  changeInput = (event) => {
-    event.preventDefault();
-    this.setState({
-      searchText: event.target.value
-    })
-  };
-
   render() {
 
     // filterUsers filters the
+    console.log(this.props.searchText);
     var filterUsers = this.props.users.filter((u) => {
-      if(this.state.searchText === "") {
+      if(this.props.searchText === "") {
         return true;
       };
-      if(u.first_name.indexOf(this.state.searchText) > -1) {
+      if(u.first_name.indexOf(this.props.searchText) > -1) {
         return true;
       } else return false;
     });
@@ -51,7 +44,6 @@ class ListOfUsers extends React.Component {
 
     return (
       <div>
-        <input label='Search' placeholder="search" onChange={this.changeInput} />
         <div>{userDivs}</div>
         <button onClick={this.buttonClick}>{this.state.visible ? 'HIDE' : 'SHOW'}</button>
 
@@ -62,7 +54,8 @@ class ListOfUsers extends React.Component {
 
   function mapStateToProps(state) {
     return {
-      users: state.users
+      users: state.users,
+      searchText: state.searchText
     }
   }
 

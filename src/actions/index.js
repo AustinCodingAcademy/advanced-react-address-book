@@ -4,3 +4,10 @@ export function setCurrentUser(user){
    value: user
  }
 }
+
+export function setSearchText(text) {
+  return {
+    type: "SET_TEXT",
+    value: text
+  }
+}
