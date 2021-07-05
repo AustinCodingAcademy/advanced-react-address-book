@@ -2,13 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
-import users from "./users";
+import store from "./store";
+import {Provider} from 'react-redux';
 
+
+// var selectedUser = '';
+//
+// function selectUser(user) {
+//   selectedUser = user;
+//   render();
+// };
 
 function render() {
   ReactDOM.render(
-    <App />,
-    document.getElementById("root")
+   <Provider store={store}><App /></Provider>,
+   document.getElementById('root')
   );
 }
 render();
+
+// export default selectUser;
